@@ -49,10 +49,10 @@ export const MovieProvider = ({ children }: MovieProviderProps) => {
           ? await searchMovies(query, page)
           : await getPopularMovies(page);
         setMovies(response.data.results);
-        console.log(response.data.results);
-
         setTotalPages(response.data.total_pages);
         setCurrentPage(page);
+
+        console.log(response.data);
       } catch (err) {
         setError('Falha ao buscar filmes. Tente novamente mais tarde.');
         console.log(err);

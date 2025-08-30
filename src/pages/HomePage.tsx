@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useMovie } from '../context/MovieContext';
 import SearchBar from '../components/SearchBar';
-import FilterForm from '../components/FilterForm';
 import MovieCard from '../components/MovieCard';
+
+import '../styles/pages/HomePage.css';
 
 const HomePage = () => {
   const {
@@ -39,13 +40,11 @@ const HomePage = () => {
 
   return (
     <div className='home-page'>
-      <h1>Pesquisa de Filmes</h1>
       <SearchBar />
-      <FilterForm />
       {loading && <p>Carregando filmes...</p>}
       {error && <p className='error'>{error}</p>}
       {!loading && movies.length === 0 && <p>Nenhum filme encontrado.</p>}
-      <div className='movie-list'>
+      <div className='container-movie-list'>
         {movies.map((movie) => (
           <MovieCard key={movie.id} {...movie} />
         ))}

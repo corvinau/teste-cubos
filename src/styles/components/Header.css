@@ -1,0 +1,25 @@
+.header-container {
+  width: auto;
+  height: 80px;
+  border-bottom: 1px solid; 
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-container-name {
+  margin-left: 16px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.header-container-logo img {
+  height: 36px;
+}

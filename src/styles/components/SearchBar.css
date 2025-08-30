@@ -1,0 +1,17 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+.filter-container-search {
+  display: flex;
+}
+
+.filter-container-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
