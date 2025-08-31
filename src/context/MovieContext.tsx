@@ -2,8 +2,8 @@ import {
   createContext,
   useState,
   useContext,
-  ReactNode,
   useCallback,
+  type ReactNode,
 } from 'react';
 import { getPopularMovies, searchMovies } from '../api/tmdb';
 
@@ -61,7 +61,7 @@ export const MovieProvider = ({ children }: MovieProviderProps) => {
       }
     },
     [setMovies, setTotalPages, setCurrentPage, setLoading, setError]
-  ); // Adicione todas as dependências aqui
+  );
 
   const handlePageChange = useCallback(
     (page: number) => {

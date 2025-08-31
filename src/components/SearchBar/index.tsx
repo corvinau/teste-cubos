@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { useMovie } from '../../context/MovieContext';
 
-import FilterForm from '../FilterForm';
 import Button from '../Button';
 
-import { Filter } from '../../assets/icons/Filter.tsx';
+import { Search } from '../../assets/icons/Search.tsx';
 
 import './styles.css';
 
 const SearchBar = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   const { searchTerm, setSearchTerm, fetchMovies } = useMovie();
-
-  const toggleFilter = () => {
-    setIsVisible(!isVisible);
-  };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,21 +18,17 @@ const SearchBar = () => {
 
   return (
     <div className='filter-container'>
-      <div className='filter-container-search'>
-        <form onSubmit={handleSearch}>
-          <input
-            type='text'
-            placeholder='Pesquise um filme...'
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button type='submit'>Pesquisar</button>
-        </form>
+      <form onSubmit={handleSearch} className='filter-container-form'>
+        <input
+          type='text'
+          placeholder='Pesquise por filmes'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className='filter-container-input'
+        />
 
-        <Button onButtonClick={toggleFilter} nameButton={<Filter />} />
-      </div>
-
-      <div className='filter-container-form'>{isVisible && <FilterForm />}</div>
+        <Button type='submit' nameButton={<Search />} className='secondary' />
+      </form>
     </div>
   );
 };

@@ -3,3 +3,38 @@ button {
   padding: 12px 20px;
   color: var(--color-text-primary);
 }
+
+.primary {
+  background-color: var(--color-primary);
+}
+
+.primary:hover {
+  background-color: var(--purple-10);
+}
+
+.primary:active {
+  background-color: var(--purple-8);
+}
+
+.primary:disabled {
+  background-color: var(--mauve-9);
+  color: var(--mauve-a10);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+  backdrop-filter: blur(4px);
+}
+
+.secondary:hover {
+  background-color: var(--purple-a4);
+}
+
+.secondary:active {
+  background-color: var(--purple-a2);
+}
+
+.secondary:disabled {
+  background-color: var(--mauve-a3);
+  color: var(--mauve-a10);
+}

@@ -21,6 +21,7 @@ const Header = () => {
         <Button
           onButtonClick={toggleTheme}
           nameButton={theme === 'light' ? <Moon /> : <Sun />}
+          className='secondary'
         />
       </div>
     </div>
