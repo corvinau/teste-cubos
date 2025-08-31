@@ -4,18 +4,27 @@ import {
   useContext,
   useCallback,
   type ReactNode,
+  useEffect,
 } from 'react';
-import { getPopularMovies, searchMovies } from '../api/tmdb';
+import { getGenres, getPopularMovies, searchMovies } from '../api/tmdb';
 
 interface Movie {
   id: number;
   title: string;
   poster_path: string;
   release_date: string;
+  vote_average: number;
+  genre_ids: [number];
+}
+
+interface Genre {
+  id: number;
+  name: string;
 }
 
 export interface MovieContextType {
   movies: Movie[];
+  genres: Genre[];
   loading: boolean;
   error: string | null;
   currentPage: number;
@@ -34,6 +43,7 @@ interface MovieProviderProps {
 
 export const MovieProvider = ({ children }: MovieProviderProps) => {
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [genres, setGenres] = useState<Genre[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -70,8 +80,21 @@ export const MovieProvider = ({ children }: MovieProviderProps) => {
     [fetchMovies, searchTerm]
   );
 
+  useEffect(() => {
+    const fetchGenres = async () => {
+      try {
+        const response = await getGenres();
+        setGenres(response.data.genres);
+      } catch (err) {
+        console.error('Falha ao buscar gêneros', err);
+      }
+    };
+    fetchGenres();
+  }, []);
+
   const value = {
     movies,
+    genres,
     loading,
     error,
     currentPage,

@@ -11,6 +11,7 @@ import './styles.css';
 const HomePage = () => {
   const {
     movies,
+    genres,
     loading,
     error,
     currentPage,
@@ -22,6 +23,13 @@ const HomePage = () => {
   useEffect(() => {
     fetchMovies('', 1);
   }, [fetchMovies]);
+
+  const getGenreNames = (genreIds: number[]) => {
+    return genreIds.map((id) => {
+      const genre = genres.find((g) => g.id === id);
+      return genre ? genre.name : 'Desconhecido';
+    });
+  };
 
   return (
     <div className='container-home-page'>
@@ -37,7 +45,11 @@ const HomePage = () => {
         </div>
 
         {movies.map((movie) => (
-          <MovieCard key={movie.id} {...movie} />
+          <MovieCard
+            key={movie.id}
+            {...movie}
+            genres={getGenreNames(movie.genre_ids)}
+          />
         ))}
       </div>
 

@@ -5,6 +5,11 @@ import { getMovieDetails } from '../../api/tmdb';
 
 import './styles.css';
 
+interface Genre {
+  id: number;
+  name: string;
+}
+
 interface MovieDetails {
   title: string;
   original_title: string;
@@ -12,6 +17,7 @@ interface MovieDetails {
   overview: string;
   budget: number;
   poster_path: string;
+  genres: Genre[];
 }
 
 const MovieDetailsPage = () => {
@@ -69,6 +75,9 @@ const MovieDetailsPage = () => {
       <h3>({movie.original_title})</h3>
       <p>**Lançamento:** {new Date(movie.release_date).toLocaleDateString()}</p>
       <p>**Orçamento:** {formatCurrency(movie.budget)}</p>
+
+      <p>**Gêneros:** {movie.genres.map((genre) => genre.name).join(', ')}</p>
+
       <p>**Descrição:** {movie.overview}</p>
     </div>
   );

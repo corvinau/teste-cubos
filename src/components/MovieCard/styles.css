@@ -27,3 +27,29 @@
   color: #eeeeee;
   font-weight: 600;
 }
+
+.movie-title-genres {
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #b4b4b4;
+  font-size: var(--font-size-small);
+}
+
+.vote-average {
+  display: flex;
+  justify-content: center;
+}
+
+.vote-average,
+.movie-title-genres {
+  display: none;
+}
+
+.movie-card:hover .vote-average {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-card:hover .movie-title-genres {
+  display: block;
+}

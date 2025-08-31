@@ -1,0 +1,46 @@
+.container-progress-bar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 100%;
+}
+
+.svg-progress-bar {
+  transform: rotate(-90deg); /* Começa o progresso no topo */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background-progress-bar {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.27); /* Cor do fundo da barra */
+}
+
+.progress-progress-bar {
+  fill: none;
+  stroke: #ffe000; /* Cor do progresso */
+  transition: stroke-dashoffset 0.35s ease; /* Transição suave na mudança de progresso */
+}
+
+.text-progress-bar {
+  font-weight: 600;
+  color: #ffe000;
+  position: relative;
+  z-index: 1;
+}
+
+.text-progress-progress-bar {
+  color: #ffe000;
+  font-size: 1.5rem;
+}
+
+.percent-progress-progress-bar {
+  color: #ffffff;
+  font-size: var(--font-size-base);
+}
