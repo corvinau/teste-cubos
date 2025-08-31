@@ -24,4 +24,6 @@
     rgba(0, 0, 0, 0.5) 50%,
     #000000 100%
   );
+  color: #eeeeee;
+  font-weight: 600;
 }

@@ -14,8 +14,8 @@
 :root {
   --color-primary: var(--purple-9);
   --color-secondary: var(--purple-a2);
-  --color-text-primary: var(--mauve-1);
-  --color-text-secondary: var(--mauve-2);
+  --color-text-primary: var(--mauve-3);
+  --color-text-secondary: var(--mauve-8);
   --color-background-primary: var(--mauve-12);
   --color-background-secondary: var(--mauve-a3);
   --color-border: var(--mauve-a6);
@@ -35,8 +35,8 @@
 [data-theme='light'] {
   --color-primary: var(--purple-9);
   --color-secondary: var(--purple-a2);
-  --color-text-primary: var(--mauve-dark-1);
-  --color-text-secondary: var(--mauve-2);
+  --color-text-primary: var(--mauve-12);
+  --color-text-secondary: var(--mauve-11);
   --color-background-primary: var(--mauve-1);
   --color-background-secondary: var(--mauve-a10);
   --color-border: var(--mauve-a6);

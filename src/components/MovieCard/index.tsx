@@ -20,9 +20,7 @@ const MovieCard = ({ id, title, poster_path }: MovieCardProps) => {
             '--background-image-url': `url(${imageUrl})`,
           } as React.CSSProperties
         }>
-        <div className='movie-title'>
-          <h3>{title}</h3>
-        </div>
+        <div className='movie-title'>{title}</div>
       </div>
     </Link>
   );

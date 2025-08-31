@@ -2,7 +2,9 @@ import { useTheme } from '../../context/ThemeContext.tsx';
 
 import Button from '../Button';
 
-import { Logo } from '../../assets/logo-cubos.tsx';
+import { Logo } from '../../assets/LogoCubos.tsx';
+import { Moon } from '../../assets/icons/Moon.tsx';
+import { Sun } from '../../assets/icons/Sun.tsx';
 
 import './styles.css';
 
@@ -18,13 +20,7 @@ const Header = () => {
       <div className='header-container-button'>
         <Button
           onButtonClick={toggleTheme}
-          nameButton={
-            theme === 'light' ? (
-              <img src='src/assets/icons/moon.svg' alt='Tema escuro' />
-            ) : (
-              <img src='src/assets/icons/sun.svg' alt='Tema claro' />
-            )
-          }
+          nameButton={theme === 'light' ? <Moon /> : <Sun />}
         />
       </div>
     </div>

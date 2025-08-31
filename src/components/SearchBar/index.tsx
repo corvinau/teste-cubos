@@ -5,6 +5,8 @@ import { useMovie } from '../../context/MovieContext';
 import FilterForm from '../FilterForm';
 import Button from '../Button';
 
+import { Filter } from '../../assets/icons/Filter.tsx';
+
 import './styles.css';
 
 const SearchBar = () => {
@@ -34,10 +36,7 @@ const SearchBar = () => {
           <button type='submit'>Pesquisar</button>
         </form>
 
-        <Button
-          onButtonClick={toggleFilter}
-          nameButton={<img src='src/assets/icons/filter.svg' alt='Filtro' />}
-        />
+        <Button onButtonClick={toggleFilter} nameButton={<Filter />} />
       </div>
 
       <div className='filter-container-form'>{isVisible && <FilterForm />}</div>
