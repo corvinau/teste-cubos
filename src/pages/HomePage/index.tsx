@@ -4,6 +4,7 @@ import { useMovie } from '../../context/MovieContext';
 
 import SearchBar from '../../components/SearchBar';
 import MovieCard from '../../components/MovieCard';
+import Pagination from '../../components/Pagination';
 
 import './styles.css';
 
@@ -21,24 +22,6 @@ const HomePage = () => {
   useEffect(() => {
     fetchMovies('', 1);
   }, [fetchMovies]);
-
-  const pageNumbers = Array.from(
-    { length: totalPages > 5 ? 5 : totalPages },
-    (_, i) => i + 1
-  );
-
-  const renderPagination = () => (
-    <div className='container-pagination'>
-      {pageNumbers.map((page) => (
-        <button
-          key={page}
-          onClick={() => handlePageChange(page)}
-          disabled={page === currentPage}>
-          {page}
-        </button>
-      ))}
-    </div>
-  );
 
   return (
     <div className='container-home-page'>
@@ -58,7 +41,13 @@ const HomePage = () => {
         ))}
       </div>
 
-      {movies.length > 0 && renderPagination()}
+      {totalPages > 1 && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      )}
     </div>
   );
 };
