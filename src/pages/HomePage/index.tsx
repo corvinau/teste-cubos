@@ -28,7 +28,7 @@ const HomePage = () => {
   );
 
   const renderPagination = () => (
-    <div className='pagination'>
+    <div className='container-pagination'>
       {pageNumbers.map((page) => (
         <button
           key={page}
@@ -41,16 +41,23 @@ const HomePage = () => {
   );
 
   return (
-    <div className='home-page'>
+    <div className='container-home-page'>
       <SearchBar />
-      {loading && <p>Carregando filmes...</p>}
-      {error && <p className='error'>{error}</p>}
-      {!loading && movies.length === 0 && <p>Nenhum filme encontrado.</p>}
+
       <div className='container-movie-list'>
+        <div className='container-movie-messages'>
+          {loading && <h3>Carregando filmes</h3>}
+
+          {error && <h3>Erro: {error}</h3>}
+
+          {!loading && movies.length === 0 && <h3>Nenhum filme encontrado.</h3>}
+        </div>
+
         {movies.map((movie) => (
           <MovieCard key={movie.id} {...movie} />
         ))}
       </div>
+
       {movies.length > 0 && renderPagination()}
     </div>
   );

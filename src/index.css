@@ -17,7 +17,7 @@
   --color-text-primary: var(--mauve-3);
   --color-text-secondary: var(--mauve-8);
   --color-background-primary: var(--mauve-12);
-  --color-background-secondary: var(--mauve-a3);
+  --color-background-secondary: var(--mauve-a4);
   --color-border: var(--mauve-a6);
 
   --font-family-base: Montserrat, sans-serif;
@@ -38,7 +38,7 @@
   --color-text-primary: var(--mauve-12);
   --color-text-secondary: var(--mauve-11);
   --color-background-primary: var(--mauve-1);
-  --color-background-secondary: var(--mauve-a10);
+  --color-background-secondary: var(--mauve-a4);
   --color-border: var(--mauve-a6);
 }
 
