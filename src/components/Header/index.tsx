@@ -1,8 +1,10 @@
-import { useTheme } from '../context/ThemeContext.tsx';
+import { useTheme } from '../../context/ThemeContext.tsx';
 
-import Button from './Button.tsx';
+import Button from '../Button';
 
-import '../styles/components/Header.css';
+import { Logo } from '../../assets/logo-cubos.tsx';
+
+import './styles.css';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -10,7 +12,7 @@ const Header = () => {
   return (
     <div className='header-container'>
       <div className='header-container-logo'>
-        <img src='src/assets/logo-cubos.svg' alt='Logo Cubos' />
+        <Logo />
         <div className='header-container-name'>Movies</div>
       </div>
       <div className='header-container-button'>

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useMovie } from '../context/MovieContext';
 
-import FilterForm from '../components/FilterForm';
-import Button from './Button';
+import { useMovie } from '../../context/MovieContext';
 
-import '../styles/components/SearchBar.css';
+import FilterForm from '../FilterForm';
+import Button from '../Button';
+
+import './styles.css';
 
 const SearchBar = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,7 +1,7 @@
 .header-container {
   width: auto;
   height: 80px;
-  border-bottom: 1px solid; 
+  border-bottom: 1px solid;
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -20,6 +20,8 @@
   line-height: 100%;
 }
 
-.header-container-logo img {
+.header-container-logo svg {
   height: 36px;
+  width: auto;
+  color: var(--color-text-primary);
 }

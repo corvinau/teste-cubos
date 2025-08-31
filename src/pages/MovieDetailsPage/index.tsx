@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieDetails } from '../api/tmdb';
+
+import { getMovieDetails } from '../../api/tmdb';
+
+import './styles.css';
 
 interface MovieDetails {
   title: string;
@@ -9,7 +12,6 @@ interface MovieDetails {
   overview: string;
   budget: number;
   poster_path: string;
-  // Adicione outros detalhes que você precisa
 }
 
 const MovieDetailsPage = () => {

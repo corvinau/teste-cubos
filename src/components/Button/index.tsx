@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import '../styles/components/Button.css';
+
+import './styles.css';
 
 interface ButtonProps {
   nameButton: ReactNode;

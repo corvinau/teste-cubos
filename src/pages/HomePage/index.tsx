@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
-import { useMovie } from '../context/MovieContext';
-import SearchBar from '../components/SearchBar';
-import MovieCard from '../components/MovieCard';
 
-import '../styles/pages/HomePage.css';
+import { useMovie } from '../../context/MovieContext';
+
+import SearchBar from '../../components/SearchBar';
+import MovieCard from '../../components/MovieCard';
+
+import './styles.css';
 
 const HomePage = () => {
   const {

@@ -1,8 +1,11 @@
 .container-movie-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 24px;
   padding: 12px;
   justify-content: center;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
 }
 
 .pagination {

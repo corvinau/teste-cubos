@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './styles.css';
+
 const FilterForm = () => {
   // Use state local para os filtros
   const [selectedGenre, setSelectedGenre] = React.useState('');

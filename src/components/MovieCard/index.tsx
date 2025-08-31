@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import '../styles/components/MovieCard.css';
+import './styles.css';
 
 interface MovieCardProps {
   id: number;

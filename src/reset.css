@@ -1,41 +1,35 @@
 /* ========================================================================== */
-/* BÁSICO RESET CSS                                                           */
+/* RESET BÁSICO CSS                                                           */
 /* Fonte: Baseado em normalize.css e Eric Meyer's reset                       */
 /* ========================================================================== */
 
-/* Use a box-sizing do tipo border-box para facilitar o layout */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove margens e paddings padrão de todos os elementos para evitar inconsistências */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Redefine a fonte padrão do HTML e ajusta o line-height */
 html {
   font-family: sans-serif;
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%; /* Evita que o texto aumente no iOS */
+  -webkit-text-size-adjust: 100%;
 }
 
-/* Remove a lista de marcadores padrão em ul e ol */
 ul,
 ol {
   list-style: none;
 }
 
-/* Remove a decoração de texto em links para que você possa estilizá-los */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Garante que imagens, iframes e vídeos não tenham bordas e se ajustem corretamente */
 img,
 iframe,
 video,
@@ -45,7 +39,6 @@ picture {
   max-width: 100%;
 }
 
-/* Redefine os elementos semânticos para se comportarem como blocos */
 article,
 aside,
 footer,
@@ -59,18 +52,16 @@ main {
   display: block;
 }
 
-/* Garante que botões e inputs tenham estilos base consistentes */
 button,
 input,
 select,
 textarea {
-  font: inherit; /* Herda a fonte do corpo do documento */
+  font: inherit;
   border: none;
   background: none;
   outline: none;
 }
 
-/* Redefine a aparência de elementos de formulário */
 input[type='text'],
 input[type='password'],
 input[type='email'],
