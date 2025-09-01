@@ -32,11 +32,11 @@ const HomePage = () => {
   };
 
   return (
-    <div className='container-home-page'>
+    <div className='home-page-container'>
       <SearchBar />
 
-      <div className='container-movie-list'>
-        <div className='container-movie-messages'>
+      <div className='movie-list-container'>
+        <div className='movie-messages-container'>
           {loading && <h3>Carregando filmes</h3>}
 
           {error && <h3>Erro: {error}</h3>}

@@ -26,3 +26,11 @@ export const getMovieDetails = (movieId: number) => {
 export const getGenres = () => {
   return tmdb.get('/genre/movie/list');
 };
+
+export const getLanguages = () => {
+  return tmdb.get('/configuration/languages');
+};
+
+export const getMovieVideos = (id: number) => {
+  return tmdb.get(`/movie/${id}/videos`);
+};

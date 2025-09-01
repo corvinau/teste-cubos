@@ -20,11 +20,11 @@ const SearchBar = () => {
     <div className='filter-container'>
       <form onSubmit={handleSearch} className='filter-container-form'>
         <input
+          className='filter-container-input'
           type='text'
           placeholder='Pesquise por filmes'
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className='filter-container-input'
         />
 
         <Button type='submit' nameButton={<Search />} className='secondary' />

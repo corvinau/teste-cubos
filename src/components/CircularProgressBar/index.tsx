@@ -17,11 +17,11 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div className='container-progress-bar'>
-      <svg className='svg-progress-bar' viewBox='0 0 120 120'>
+    <div className='progress-bar-container'>
+      <svg className='progress-bar-svg' viewBox='0 0 120 120'>
         {/* Círculo de fundo, representa 100% */}
         <circle
-          className='background-progress-bar'
+          className='progress-bar-background'
           cx='60'
           cy='60'
           r={radius}
@@ -30,7 +30,7 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
 
         {/* Círculo de progresso, animado pelo 'offset' */}
         <circle
-          className='progress-progress-bar'
+          className='progress-bar-progress'
           cx='60'
           cy='60'
           r={radius}
@@ -39,9 +39,9 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
           strokeDashoffset={offset}
         />
       </svg>
-      <div className='text-progress-bar'>
-        <span className='text-progress-progress-bar'>{progress}</span>
-        <span className='percent-progress-progress-bar'>%</span>
+      <div className='progress-bar-text'>
+        <span className='progress-bar-number-progress'>{progress}</span>
+        <span className='progress-bar-percent-progress'>%</span>
       </div>
     </div>
   );

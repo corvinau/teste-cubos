@@ -6,7 +6,12 @@ import {
   type ReactNode,
   useEffect,
 } from 'react';
-import { getGenres, getPopularMovies, searchMovies } from '../api/tmdb';
+import {
+  getGenres,
+  getLanguages,
+  getPopularMovies,
+  searchMovies,
+} from '../api/tmdb';
 
 interface Movie {
   id: number;
@@ -22,9 +27,16 @@ interface Genre {
   name: string;
 }
 
+interface Language {
+  iso_639_1: string;
+  english_name: string;
+  name: string;
+}
+
 export interface MovieContextType {
   movies: Movie[];
   genres: Genre[];
+  languages: Language[];
   loading: boolean;
   error: string | null;
   currentPage: number;
@@ -44,6 +56,7 @@ interface MovieProviderProps {
 export const MovieProvider = ({ children }: MovieProviderProps) => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
+  const [languages, setLanguages] = useState<Language[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -61,8 +74,6 @@ export const MovieProvider = ({ children }: MovieProviderProps) => {
         setMovies(response.data.results);
         setTotalPages(response.data.total_pages);
         setCurrentPage(page);
-
-        console.log(response.data);
       } catch (err) {
         setError('Falha ao buscar filmes. Tente novamente mais tarde.');
         console.log(err);
@@ -90,11 +101,22 @@ export const MovieProvider = ({ children }: MovieProviderProps) => {
       }
     };
     fetchGenres();
+
+    const fetchLanguages = async () => {
+      try {
+        const response = await getLanguages();
+        setLanguages(response.data);
+      } catch (err) {
+        console.error('Falha ao buscar idiomas', err);
+      }
+    };
+    fetchLanguages();
   }, []);
 
   const value = {
     movies,
     genres,
+    languages,
     loading,
     error,
     currentPage,

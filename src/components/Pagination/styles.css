@@ -1,8 +1,8 @@
-.container-pagination {
+.pagination-container {
   padding: 24px;
 }
 
-.container-pagination-buttons {
+.pagination-buttons-container {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -12,7 +12,7 @@ button {
   margin: 0 6px;
 }
 
-.container-pagination-info {
+.pagination-info-container {
   text-align: center;
   margin-top: 24px;
   color: var(--color-text-secondary);

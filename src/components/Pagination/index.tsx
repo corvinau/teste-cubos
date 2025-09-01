@@ -29,8 +29,8 @@ const Pagination: React.FC<PaginationProps> = ({
   }
 
   return (
-    <div className='container-pagination'>
-      <div className='container-pagination-buttons'>
+    <div className='pagination-container'>
+      <div className='pagination-buttons-container'>
         <Button
           onButtonClick={() => onPageChange(currentPage - 1)}
           nameButton={<ChevronLeft />}
@@ -55,7 +55,7 @@ const Pagination: React.FC<PaginationProps> = ({
           disabled={currentPage >= totalPages}
         />
       </div>
-      <div className='container-pagination-info'>
+      <div className='pagination-info-container'>
         Página {currentPage} de {totalPages}
       </div>
     </div>

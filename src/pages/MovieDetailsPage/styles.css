@@ -1,0 +1,161 @@
+.movie-details-messages-container {
+  text-align: center;
+}
+
+.movie-details-page-container {
+  margin: 32px;
+}
+
+.movie-datails-information-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  background: linear-gradient(
+    90deg,
+    var(--color-background-primary) -20%,
+    rgba(18, 17, 19, 0.5) 50%,
+    var(--color-background-primary) 120%
+  ), var(--background-image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+
+.movie-details-poster {
+  border-radius: 4px;
+  box-shadow: 0px 1px 5px 0px #00000033;
+  height: 540px;
+}
+
+.movie-details-informations {
+  display: flex;
+  flex-direction: column;
+  margin: 32px;
+}
+
+.movie-details-information-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* .movie-detail-title {} */
+
+.title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.original-title {
+  color: var(--color-text-secondary);
+}
+
+.tagline {
+  font-style: italic;
+  margin-top: 16px;
+}
+
+.movie-detail-statistics {
+  display: flex;
+  align-items: center;
+}
+
+.statistics {
+  backdrop-filter: blur(4px);
+  background-color: var(--color-background-tertiary);
+  border-radius: 4px;
+  padding: 16px;
+  margin: 8px;
+  width: 100%;
+}
+
+.statistics-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.statistics-info {
+  font-weight: 600;
+  font-size: var(--font-size-small);
+  text-transform: capitalize;
+  color: var(--color-text-primary);
+}
+
+.statistics-chart {
+  background-color: transparent;
+  margin: 0 8px;
+}
+
+.statistics-info-overview {
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  text-transform: none;
+}
+
+.statistics-tag {
+  display: flex;
+}
+
+.tag {
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+  padding: 8px;
+  text-transform: uppercase;
+  background-color: rgba(193, 80, 255, 0.18);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.movie-detail-overview {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 49%;
+}
+
+
+.movie-detail-technical-information {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.movie-datails-trailer-container {
+  margin: 24px 0;
+}
+
+.movie-trailer-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.movie-trailer-info {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.trailer-section > div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.trailer-item > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.trailer-item > a > img {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  width: auto;
+  height: 300px;
+}

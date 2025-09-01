@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import './styles.css';
 import CircularProgressBar from '../CircularProgressBar';
+
+import './styles.css';
 
 interface MovieCardProps {
   id: number;
@@ -24,18 +25,20 @@ const MovieCard = ({
   return (
     <Link to={`/movie/${id}`}>
       <div
-        className='movie-card'
+        className='movie-card-container'
         style={
           {
             '--background-image-url': `url(${imageUrl})`,
           } as React.CSSProperties
         }>
-        <div className='vote-average'>
+        <div className='vote-average-container'>
           <CircularProgressBar progress={votes} />
         </div>
 
-        <div className='movie-title'>
-          <div className='movie-title-genres'>{genres.join(', ')}</div>
+        <div className='movie-title-container'>
+          <div className='movie-title-genres-container'>
+            {genres.join(', ')}
+          </div>
           {title}
         </div>
       </div>
