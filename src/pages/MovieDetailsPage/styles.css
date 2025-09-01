@@ -12,11 +12,12 @@
   align-items: center;
   padding: 32px;
   background: linear-gradient(
-    90deg,
-    var(--color-background-primary) -20%,
-    rgba(18, 17, 19, 0.5) 50%,
-    var(--color-background-primary) 120%
-  ), var(--background-image-url);
+      90deg,
+      var(--color-background-primary) -20%,
+      rgba(18, 17, 19, 0.5) 50%,
+      var(--color-background-primary) 120%
+    ),
+    var(--background-image-url);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,6 +100,7 @@
 
 .statistics-tag {
   display: flex;
+  align-items: center;
 }
 
 .tag {
@@ -118,7 +120,6 @@
   flex-direction: column;
   width: 49%;
 }
-
 
 .movie-detail-technical-information {
   display: flex;
@@ -154,8 +155,55 @@
 
 .trailer-item > a > img {
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
   width: auto;
   height: 300px;
+}
+
+@media (max-width: 750px) {
+  .movie-datails-information-container {
+    background: transparent;
+  }
+
+  .movie-detail-statistics {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .movie-detail-technical-information > .movie-detail-statistics {
+    flex-direction: row;
+  }
+
+  .statistics {
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 1060px) {
+  .movie-datails-information-container {
+    flex-direction: column;
+  }
+
+  .movie-details-informations {
+    margin: 0;
+  }
+
+  .movie-details-poster {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 1625px) {
+  .movie-details-information-section {
+    flex-direction: column;
+  }
+
+  .movie-detail-overview {
+    width: 100%;
+  }
+
+  .movie-detail-technical-information {
+    width: 100%;
+  }
 }

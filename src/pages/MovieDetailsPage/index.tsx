@@ -239,7 +239,7 @@ const MovieDetailsPage = () => {
       <div className='movie-datails-trailer-container'>
         <div className='movie-trailer-title'>Trailer</div>
         <div className='movie-trailer-info'>
-          {trailers.length > 0 && (
+          {trailers.length > 0 ? (
             <div className='trailer-section'>
               <div>
                 {trailers.map((trailer) => (
@@ -258,6 +258,8 @@ const MovieDetailsPage = () => {
                 ))}
               </div>
             </div>
+          ) : (
+            <div>Nenhum trailer foi encontrado para esse filme.</div>
           )}
         </div>
       </div>
