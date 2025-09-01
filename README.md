@@ -1,69 +1,53 @@
-# React + TypeScript + Vite
+# Sobre o projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido para o processo seletivo da empresa Cubos, e consiste em uma listagem de filmes baseada no retorno da API do [TMDB](https://developer.themoviedb.org/docs).
 
-Currently, two official plugins are available:
+## Explicação do uso do projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A aplicação mostra os filmes cadastrados na API, filtra por pesquisa por nomes e mostra os detalhes de cada filme.
 
-## Expanding the ESLint configuration
+## Iniciando a aplicação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+As instruções abaixo vão lhe permitir obter uma cópia do projeto e rodar a aplicação localmente.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pré-requisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Para rodar a aplicação, você precisa ter o Node.js instalado na sua máquina.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalação
+
+Para acessar o projeto, basta clonar o repositório ou realizar o download dos arquivos do projeto.
+
+Após clonar o repositório, acesse a pasta do projeto e instale as dependências utilizando o seguinte comando no seu terminal:
+
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Depois entre no projeto e procure o arquivo `.env`, faça uma cópia dele com o nome `.env.development` e ali coloque a sua chave da API do TMDB.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Após instalar as dependências e configurar o arquivo de variáveis de ambiente, utilize o seguinte comando no seu terminal para iniciar a aplicação:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm run dev
 ```
+
+Com isso, a aplicação estará rodando na sua máquina. Para acessar a aplicação, basta acessar o <code>localhost</code> no seu navegador.
+
+## Acessando o projeto em um servidor
+
+Para visualizar o projeto rodando em um servidor da [`Vercel`](https://vercel.com/), acesse: [teste-cubos.vercel.app/](https://teste-cubos.vercel.app/)
+
+## Tecnologias utilizadas
+
+- <b>ReactJS:</b> Biblioteca JavaScript para construir interfaces com base em componentes.
+- <b>React Router Dom:</b> Lida com a navegação e o roteamento da aplicação.
+- <b>Axios:</b> Biblioteca para fazer requisições HTTP (chamadas à API) de forma simples.
+- <b>Radix colors:</b> Biblioteca de cores para criar interfaces consistentes. Fornece um conjunto de cores já prontas.
+- <b>TypeScript:</b> Superset de JavaScript que adiciona tipagem estática ao código.
+- <b>Vite: </b> Bundler e servidor de desenvolvimento. Compila o código durante o desenvolvimento e otimiza para o ambiente de produção.
+- <b>ESLint:</b> Ferramenta para identificar e corrigir padrões problemáticos no código JavaScript/TypeScript, garantindo consistência.
+
+## Observações
+
+Foram disponibilizadas todas as informações e designs necessários para o desenvolvimento do projeto nesse [endereço](https://git.cubos.io/cubos/desafios-tecnicos/desafio-tecnico-web).
